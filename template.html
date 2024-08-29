@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>von Briesen's Validating WEB Template</title>
-    
-    
+    <link rel = "stylesheet" type = "text/css” href = "styles/nameoffile.css" />
     <!--     
         Structure of HTML5 semantic layout swiped from PHP Fiddle and modified
         to include validing code and validation buttons and some other tweaks
@@ -36,26 +35,26 @@
     </header>
     <nav>
         <ul>
-            <li><a href="./itis3135/">itis3135 page</a></li>
-            <li><a href="#">next page</a></li>
+            <li><a href="#">Menu Option 1</a></li>
+            <li><a href="#">Menu Option 2</a></li>
         </ul>
     </nav>
     <footer> 
        Bazzom bazang... we do the bestest! 
-       <br>Designed by &copy;Icabad Enterprises
-       <br>
-        <a id="validation-link-html">
-            <img src="images/validation_html.gif" alt="Validate HTML">
-        </a>
+       <br/>Designed by &copy;Icabad Enterprises
+       <br/>
+       <a style = "text-decoration: none" id="validation-link-html">
+          <img src="images/validation_html.gif" alt="Validate HTML" />
+       </a>
        <!-- you may need to change the name of your image link to match the one you 
        uploaded -->
-        <a id="validation-link-css">
-            <img src="images/validation_css.gif" alt="Validate CSS">
-        </a>
+			 <a style = "text-decoration: none" id="validation-link-css">
+         <img src="images/validation_css.gif" alt="Validate CSS" />
+       </a>
     </footer>
     <script>
-        document.getElementById("validation-link-html").setAttribute("href", "https://validator.w3.org/check?uri="+location.href);
-        document.getElementById("validation-link-css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri="+location.href);
+        document.getElementById('validation-link-html').setAttribute('href', 'https://validator.w3.org/check?uri='+location.href);
+        document.getElementById('validation-link-css').setAttribute('href', 'https://jigsaw.w3.org/css-validator/validator?uri='+location.href);
     </script>
 </body>
 </html>
