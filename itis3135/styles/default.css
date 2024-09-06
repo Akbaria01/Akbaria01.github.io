@@ -1,9 +1,48 @@
 body
 {
   /* you better change this stuff */
-  margin: 300px;
-  font-family: papyrus;
-  color: red;
-  background-color: green;
-  font-size: 300%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Tahoma;
+  color: black;
+  background-color: lightblue;
+  font-size: 150%;
+}
+main, header, footer {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+header, h2, footer {
+  text-align: center;
+}
+body main figure{
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+
+}
+body main figure img {
+  width: 300px;
+}
+body main figure figcaption{
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 350;
+}
+a {
+  color:rgb(106, 114, 124);
+
+}
+.center {
+  text-align: center;
+  font-weight: normal;
+  font-size: 16px;
+
+}
+h1 {
+  font-size: 24px;
+
 }
