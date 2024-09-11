@@ -1,6 +1,5 @@
 body
 {
-  /* you better change this stuff */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -27,6 +26,7 @@ body main figure{
 body main figure img {
   width: 300px;
 }
+
 body main figure figcaption{
   font-style: italic;
   font-size: 14px;
@@ -46,3 +46,8 @@ h1 {
   font-size: 24px;
 
 }
+footer div {
+  
+  margin-top: 15px;
+}
+
