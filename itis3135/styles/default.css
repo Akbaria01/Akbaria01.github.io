@@ -33,7 +33,9 @@ body main figure figcaption{
   font-weight: 350;
 }
 a {
-  color:rgb(106, 114, 124);
+  color:#7D3C98;
+   text-decoration: none; 
+
 
 }
 .center {
@@ -50,4 +52,11 @@ footer div {
   
   margin-top: 15px;
 }
+nav a:hover, footer a:hover {
+    color: crimson;
+    text-decoration: line;
+}
+
+
+
 
