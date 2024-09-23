@@ -12,7 +12,7 @@
             box-sizing: border-box;
             font-family: Tahoma;
             color: black;
-            background-color: lightblue;
+            background-color: #F5F5DC; 
             font-size: 150%;
         }
         main, footer {
@@ -28,13 +28,11 @@
             vertical-align: middle;
         }
         h1 {
-        
             font-size: 24px;
         }
         footer a {
             color: #7D3C98;
             text-decoration: none;
-        
         }
         footer a:hover {
             color: crimson;
@@ -44,43 +42,56 @@
             font-size: 16px;
             text-align: center;
         }
-        header img{
+        header img {
             width: 300px;
             height: 300px;
             object-fit: contain;
         }
         section, header, footer {
-
             margin-top: 40px;
-            padding-bottom:15px;
+            padding-bottom: 15px;
         }
-        
+
        
-    
+        header::after {
+            content: '';
+            display: block;
+            height: 5px;
+            width: 100%;
+            margin: 20px 0;
+            background: linear-gradient(90deg, rgba(254,227,105,1) 0%, rgba(254,157,39,1) 20%, rgba(237,88,79,1) 40%, rgba(217,57,98,1) 60%, rgba(245,207,240,1) 80%, rgba(102,51,206,1) 100%);
+        }
+
+        section::after {
+            content: '';
+            display: block;
+            height: 5px;
+            width: 100%;
+            margin: 20px 0;
+            background: linear-gradient(90deg, rgba(254,227,105,1) 0%, rgba(254,157,39,1) 20%, rgba(237,88,79,1) 40%, rgba(217,57,98,1) 60%, rgba(245,207,240,1) 80%, rgba(102,51,206,1) 100%);
+        }
     </style>
 </head>
 <body>
     <main>
-         <header>
+        <header>
             <img src="alpacalogo.webp" alt="alpaca logo">
             <h1>AA Design Ltd.</h1>
-        
-
         </header>
-    
+
         <section>
-        <h2>About Us</h2>
-        <p>At AA Design Ltd., we believe in celebrating the quirks that make each of us unique. Our alpaca-inspired products are designed to bring smiles and joy to your everyday life. Whether it's a cozy hoodie, a plush alpaca to brighten your home, or a fun piece of décor, we want to remind you that being awkward is awesome. Join us in embracing individuality, one alpaca at a time!</p>
+            <h2>About Us</h2>
+            <p>At AA Design Ltd., we believe in celebrating the quirks that make each of us unique. Our alpaca-inspired products are designed to bring smiles and joy to your everyday life. Whether it's a cozy hoodie, a plush alpaca to brighten your home, or a fun piece of décor, we want to remind you that being awkward is awesome. Join us in embracing individuality, one alpaca at a time!</p>
         </section>
 
         <section>
-        <h2>Our Products</h2>
-        <ul>
-            <li><b>Alpaca Apparel:</b> From quirky sweaters to cool t-shirts, wear your awkwardness proudly.</li>
-            <li><b>Home Decor:</b> Bring alpaca charm into your space with pillows, wall art, and more.</li>
-            <li><b>Plushies &amp; Toys:</b> Cuddle up with our adorably awkward alpaca plush toys, designed for kids and adults.</li>
-            <li><b>Stationery &amp; Accessories:</b> Pens, notebooks, and quirky alpaca stickers to liven up your work or study.</li>
-        </ul>
+            <h2>Our Products</h2>
+            <ul>
+                <li><b>Alpaca Apparel:</b> From quirky sweaters to cool t-shirts, wear your awkwardness proudly.</li>
+                <li><b>Home Decor:</b> Bring alpaca charm into your space with pillows, wall art, and more.</li>
+                <li><b>Plushies &amp; Toys:</b> Cuddle up with our adorably awkward alpaca plush toys, designed for kids and adults.</li>
+                <li><b>Stationery &amp; Accessories:</b> Pens, notebooks, and quirky alpaca stickers to liven up your work or study.</li>
+            </ul>
         </section>
 
         <div class="contact-info">
@@ -92,8 +103,12 @@
     <footer>
         <div>
             <span>AA Design Ltd. &copy; 2024</span>
+            
         </div>
     </footer>
 </body>
 </html>
+
+
+
 
