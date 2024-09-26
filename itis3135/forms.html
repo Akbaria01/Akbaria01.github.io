@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Akbari's Awkward Alpacas || ITIS3135 || Forms</title>
+    <link href="styles/default.css" rel="stylesheet">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        caption {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input:focus, select:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ahmad Akbari's ITIS3135 || Forms</h1>
+    </header>
+
+    <main>
+        <h2>Contact Us</h2>
+
+        <form action="#" method="POST">
+            <label for="name">Name <span style="color:red">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="phone">Phone Number <span style="color:red">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required>
+
+            <label for="email">Email Address <span style="color:red">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+            <fieldset>
+                <legend>Preferred Contact Method:</legend>
+                <label>
+                    <input type="radio" name="contactMethod" value="email" required>
+                    Email
+                </label>
+                <label>
+                    <input type="radio" name="contactMethod" value="phone">
+                    Phone
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Interests:</legend>
+                <label>
+                    <input type="checkbox" name="interest" value="productUpdates">
+                    Product Updates
+                </label>
+                <label>
+                    <input type="checkbox" name="interest" value="promotions">
+                    Promotions
+                </label>
+                <label>
+                    <input type="checkbox" name="interest" value="newsletters">
+                    Newsletters
+                </label>
+            </fieldset>
+
+            <label for="services">Select a Service:</label>
+            <select id="services" name="services" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="consultation">Consultation</option>
+                <option value="sales">Sales Inquiry</option>
+                <option value="support">Customer Support</option>
+            </select>
+
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+
+    <script>
+        document.getElementById("validation-link-html").setAttribute("href", "https://validator.w3.org/check?uri="+location.href);
+        document.getElementById("validation-link-css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri="+location.href);
+    </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
+

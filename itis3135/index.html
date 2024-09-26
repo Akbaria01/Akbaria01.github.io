@@ -10,17 +10,11 @@
 </head>
 
 <body>
-    <header> 
-        <h1>Ahmad Akbari's Awkward Alpacas || ITIS3135</h1> 
-        <nav>   
-            <a href="index.html">Home</a>
-            <a href="introduction.html">Introduction</a>
-            <a href="contract.html">Contract</a>
-            <a href="about.html">About</a>
-        </nav> 
-        <hr> 
+    <header>  
+        <div data-include="components/header.html"></div>
 
     </header>
+
     <main>
         
         <h2>Home</h2>
@@ -30,41 +24,15 @@
     </main>
     
     <footer>
-        <em>Because awkward is the new awesome!</em>
-        <hr>
-        <a href="https://webpages.charlotte.edu/aakbari1/itis3135/">University webpages</a>
-        <span>||</span>  
-        <a href="https://github.com/Akbaria01">GitHub.com</a> 
-        <span>||</span> 
-        <a href="https://github.com/Akbaria01/Akbaria01.github.io">GitHub.io</a> 
-        <span>||</span> 
-        <a href="https://www.linkedin.com/in/ahmad-akbari1/">LinkedIn</a>
-        <span>||</span>  
-        <a href="https://www.freecodecamp.org/AhmadA01">FreeCodeCamp</a> 
-        <span>||</span>
-        <a href="https://www.codecademy.com/profiles/ajax1117604485">Codecademy</a>
-
-        <p>
-            <span>Page designed by <a href="aadesignltd.com/">Awkward Alpacas</a> &copy;2024, <a href="https://www.freecodecamp.org/certification/AhmadA01/responsive-web-design" target="_blank"><em>Certified in Responsive Web Design</em></a></span>
-        </p>
-
-        <div>
-            <a id="validation-link-html">
-                <img src="images/validation_html.gif" alt="Validate HTML">
-            </a>
-            <a id="validation-link-css">
-                <img src="images/validation_css.gif" alt="Validate CSS">
-            </a>
-        </div>
+        <div data-include="components/footer.html"></div>
     </footer>
     <script>
         document.getElementById("validation-link-html").setAttribute("href", "https://validator.w3.org/check?uri="+location.href);
         document.getElementById("validation-link-css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri="+location.href);
     </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
 
 </body>
-
- 
 
 </html>
 

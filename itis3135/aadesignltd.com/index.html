@@ -6,70 +6,139 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <title>AA Design Ltd.</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Tahoma;
-            color: black;
-            background-color: #F5F5DC; 
-            font-size: 150%;
-        }
-        main, footer {
-            width: 92%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        header, h2, footer {
-            text-align: center;
-        }
-        header img {
-            height: 50px; 
-            vertical-align: middle;
-        }
-        h1 {
-            font-size: 24px;
-        }
-        footer a {
-            color: #7D3C98;
-            text-decoration: none;
-        }
-        footer a:hover {
-            color: crimson;
-            text-decoration: underline;
-        }
-        .contact-info {
-            font-size: 16px;
-            text-align: center;
-        }
-        header img {
-            width: 300px;
-            height: 300px;
-            object-fit: contain;
-        }
-        section, header, footer {
-            margin-top: 40px;
-            padding-bottom: 15px;
-        }
+    body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif; 
+    color: #333;
+    background-color: #F7F4E4; 
+    font-size: 150%;
+    }
 
-       
-        header::after {
-            content: '';
-            display: block;
-            height: 5px;
-            width: 100%;
-            margin: 20px 0;
-            background: linear-gradient(90deg, rgba(254,227,105,1) 0%, rgba(254,157,39,1) 20%, rgba(237,88,79,1) 40%, rgba(217,57,98,1) 60%, rgba(245,207,240,1) 80%, rgba(102,51,206,1) 100%);
-        }
+    main, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    }
 
-        section::after {
-            content: '';
-            display: block;
-            height: 5px;
-            width: 100%;
-            margin: 20px 0;
-            background: linear-gradient(90deg, rgba(254,227,105,1) 0%, rgba(254,157,39,1) 20%, rgba(237,88,79,1) 40%, rgba(217,57,98,1) 60%, rgba(245,207,240,1) 80%, rgba(102,51,206,1) 100%);
-        }
+    header, h2, footer {
+    text-align: center;
+    }
+
+    header img {
+    height: 50px; 
+    vertical-align: middle;
+    border-radius: 50%; 
+    animation: spin 5s linear infinite;
+    }
+
+    @keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    }
+
+    h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #7D3C98; 
+    }
+
+    footer a {
+    color: #7D3C98;
+    text-decoration: none;
+    }
+
+    footer a:hover {
+    color: crimson;
+    text-decoration: underline;
+    }
+
+    .contact-info {
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+    background-color: #F2F2F2; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 50%; 
+    }
+
+    section, header, footer {
+    margin-top: 40px;
+    padding-bottom: 15px;
+    }
+
+    header::after {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    margin: 20px 0;
+    background: linear-gradient(90deg, rgba(254,227,105,1) 0%, rgba(254,157,39,1) 20%, rgba(237,88,79,1) 40%, rgba(217,57,98,1) 60%, rgba(245,207,240,1) 80%, rgba(102,51,206,1) 100%);
+    animation: gradient 5s linear infinite; 
+    }
+
+    @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+    }
+
+    section::after {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    margin: 20px 0;
+    background: linear-gradient(90deg, rgba(254,227,105,1) 0%, rgba(254,157,39,1) 20%, rgba(237,88,79,1) 40%, rgba(217,57,98,1) 60%, rgba(245,207,240,1) 80%, rgba(102,51,206,1) 100%);
+    animation: gradient 5s linear infinite; 
+    }
+
+
+    .alpaca-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: bounce 2s linear infinite;
+    }
+
+    @keyframes bounce {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    }
+
+    .alpaca-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    }
+
+    .alpaca-icon:hover {
+    animation: spin 2s
+    }
     </style>
 </head>
 <body>
@@ -108,6 +177,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
