@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="All about my passion for sport cars and drifting.">
+    <title>Sport Cars & Drifting</title>
+    <link rel="icon" href="images/favicon.ico">
+    <style>
+       
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F4F4F9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2196F3;
+            color: white;
+            padding: 10px;
+        }
+
+        header h1 {
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .validation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .validation-buttons img {
+            cursor: pointer;
+            width: 30px;
+        }
+
+        .section-nav {
+            padding: 10px;
+        }
+
+        .section-nav a {
+            margin: 5px;
+        }
+
+        .header-button {
+            background-color: #666;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <nav>
+        <a href="#home" onclick="showSection('home')">Home</a>
+        <a href="#about" onclick="showSection('about')">About Us</a>
+        <a href="#locations" onclick="showSection('locations')">Best Locations</a>
+        <a href="#events" onclick="showSection('events')">Events</a>
+        <a href="#how" onclick="showSection('how')">How It Works</a>
+        <a href="#why" onclick="showSection('why')">Why I Love It</a>
+    </nav>
+
+    <main>
+       
+        <section id="home" class="active">
+            <h2>Home</h2>
+            <figure>
+                <img src="images/image1.jpg" alt="Sport car on the track">
+                <figcaption>A thrilling drift during a weekend meet.</figcaption>
+            </figure>
+            <p>Drifting is a thrilling sport where drivers control their cars in a controlled slide through corners.</p>
+            <p>The sport has grown massively, with events and competitions happening all around the world. The adrenaline rush from drifting is unmatched.</p>
+        </section>
+
+      
+        <section id="about">
+            <h2>About Us</h2>
+            <figure>
+                <img src="images/" alt="Drifting car at a sunset">
+                <figcaption>A perfect sunset drift in the mountains.</figcaption>
+            </figure>
+            <p>We are a group of enthusiasts who are passionate about sport cars and drifting. Our love for cars goes beyond speed; it's about precision and control.</p>
+            <p>Our community gathers regularly to participate in drift events, share tips, and experience the best moments together.</p>
+        </section>
+
+        <section id="locations">
+            <h2>Best Locations</h2>
+            <figure>
+                <img src="images/" alt="Track with cars drifting">
+                <figcaption>Some of the best drift locations are hidden gems around the country.</figcaption>
+            </figure>
+            <p>We love hitting local tracks as well as traveling to exotic locations where drift events are held.</p>
+            <ul>
+                <li>Mountain Drift Circuit - A tight, twisty road with scenic views.</li>
+                <li>Desert Raceway - Wide, open spaces perfect for high-speed drifting.</li>
+                <li>Urban Streets - A mix of turns and straightaways ideal for street drifting.</li>
+            </ul>
+        </section>
+
+       
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Summer Drift Fest</td>
+                        <td>June 5, 2025</td>
+                        <td>Mountain Drift Circuit</td>
+                    </tr>
+                    <tr>
+                        <td>Desert Drift Challenge</td>
+                        <td>July 15, 2025</td>
+                        <td>Desert Raceway</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    
+        <section id="how">
+            <h2>How It Works</h2>
+            <p>Drifting requires a perfect balance of throttle, steering, and brake control. The driver needs to initiate the drift by steering the car into a corner while applying the throttle, causing the rear tires to lose traction.</p>
+            <p>Mastering drifting takes practice, coordination, and understanding of car dynamics.</p>
+        </section>
+
+        
+        <section id="why">
+            <h2>Why I Love Drifting</h2>
+            <p>Drifting gives me the freedom to express myself on the road, push my limits, and experience the thrill of speed with complete control.</p>
+            <p>The community around drifting is also incredibly supportive, and it's a lifestyle that promotes camaraderie and shared excitement.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>  
+    </footer>
+            
+
+    <script>
+        
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function (section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
