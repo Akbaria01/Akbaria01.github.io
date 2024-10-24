@@ -4,194 +4,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="All about my passion for sport cars and drifting.">
-    <title>Sport Cars & Drifting</title>
-    <link rel="icon" href="images/favicon.ico">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <title>Sport Cars and Drifting Community</title>
+    
     <style>
-       
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #F4F4F9;
+            background-color: #F0F8FF;
             color: #333;
             margin: 0;
             padding: 0;
-        }
-
-        header {
-            background-color: #2196F3;
-            color: white;
-            padding: 10px;
-        }
-
-        header h1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            min-height: 100vh;
+        }
+
+        header, footer {
+            width: 100%;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px 0;
+            display: none; 
+        }
+
+        section.active {
+            display: block;
+        }
+
+        figure img {
+            width: 100%;
+            max-width: 350px; 
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         nav {
             background-color: #333;
+            padding: 10px;
             display: flex;
             justify-content: center;
-            padding: 10px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
         nav a:hover {
             background-color: #575757;
         }
 
-        section {
-            display: none;
-            padding: 20px;
-        }
-
-        .active {
-            display: block;
-        }
-
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 20px;
         }
 
-        .validation-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .validation-buttons img {
-            cursor: pointer;
-            width: 30px;
-        }
-
-        .section-nav {
-            padding: 10px;
-        }
-
-        .section-nav a {
+        footer img {
+            width: 40px;
+            height: auto;
             margin: 5px;
         }
 
-        .header-button {
-            background-color: #666;
-            border: none;
-            padding: 10px 20px;
+        footer a {
             color: white;
-            cursor: pointer;
+            text-decoration: none;
+        }
+
+        h2 {
+            color: #4682B4;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4682B4;
+            color: white;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <div data-include="components/header.html"></div>
+        <h1>Sport Cars and Drifting Community</h1>
+        <nav aria-label="Main navigation">
+            <a href="#what" onclick="showSection('what')">Home</a>
+            <a href="#who" onclick="showSection('who')">About Me</a>
+            <a href="#when" onclick="showSection('when')">When</a>
+            <a href="#where" onclick="showSection('where')">Where</a>
+            <a href="#how" onclick="showSection('how')">How</a>
+            <a href="#why" onclick="showSection('why')">Why</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#home" onclick="showSection('home')">Home</a>
-        <a href="#about" onclick="showSection('about')">About Us</a>
-        <a href="#locations" onclick="showSection('locations')">Best Locations</a>
-        <a href="#events" onclick="showSection('events')">Events</a>
-        <a href="#how" onclick="showSection('how')">How It Works</a>
-        <a href="#why" onclick="showSection('why')">Why I Love It</a>
-    </nav>
-
     <main>
-       
-        <section id="home" class="active">
-            <h2>Home</h2>
+        <section id="what" class="active">
+            <h2>What is Drifting?</h2>
             <figure>
-                <img src="images/image1.jpg" alt="Sport car on the track">
-                <figcaption>A thrilling drift during a weekend meet.</figcaption>
+                <img src="images/Sportcaronthetrack.jpg" alt="A car performing a drift at a competition">
+                <figcaption>A car performing a drift at a competition</figcaption>
+                <figcaption><em>Image generated using AI with the prompt: "A car drifting on a racetrack during a competition"</em></figcaption>
             </figure>
-            <p>Drifting is a thrilling sport where drivers control their cars in a controlled slide through corners.</p>
-            <p>The sport has grown massively, with events and competitions happening all around the world. The adrenaline rush from drifting is unmatched.</p>
+            <p>Drifting is a driving technique where the driver intentionally oversteers, causing a loss of traction in the rear wheels while maintaining control from entry to exit of a corner.</p>
+            <p>This thrilling motorsport has gained immense popularity worldwide, with numerous competitions and events dedicated to it.</p>
         </section>
 
-      
-        <section id="about">
-            <h2>About Us</h2>
+        <section id="who">
+            <h2>About Me</h2>
             <figure>
-                <img src="images/" alt="Drifting car at a sunset">
-                <figcaption>A perfect sunset drift in the mountains.</figcaption>
+                <img src="images/Driftingcaratasunset.jpg" alt="My experience at a local drifting event">
+                <figcaption>My experience at a local drifting event</figcaption>
+                <figcaption><em>Image generated using AI with the prompt: "A person enjoying a drifting event"</em></figcaption>
             </figure>
-            <p>We are a group of enthusiasts who are passionate about sport cars and drifting. Our love for cars goes beyond speed; it's about precision and control.</p>
-            <p>Our community gathers regularly to participate in drift events, share tips, and experience the best moments together.</p>
-        </section>
+            <p>I’ve always been captivated by the vibrant energy of car meets, where enthusiasts gather to share their love for automobiles. The roar of powerful engines, the sparkle of meticulously polished exteriors, and the thrill of encountering distinctive vehicles create an atmosphere that’s truly electrifying. For me, it’s not just about the cars themselves; it’s the stories, the camaraderie, and the shared enthusiasm that make these gatherings special.</p>
+            <p>My journey into the world of automotive repair has been equally rewarding. There's a unique satisfaction that comes from troubleshooting problems, wielding tools, and enhancing performance. Each hands-on project deepens my connection with my vehicle and helps me acquire new skills along the way.</p>
+            <p>Whether I’m engaging with fellow car lovers at meets or diving into a personal project in my garage, the fulfillment I derive from these experiences is unmatched. Each moment spent around cars ignites my passion and keeps me inspired in the world of motorsports.</p>
+            
 
-        <section id="locations">
-            <h2>Best Locations</h2>
-            <figure>
-                <img src="images/" alt="Track with cars drifting">
-                <figcaption>Some of the best drift locations are hidden gems around the country.</figcaption>
-            </figure>
-            <p>We love hitting local tracks as well as traveling to exotic locations where drift events are held.</p>
-            <ul>
-                <li>Mountain Drift Circuit - A tight, twisty road with scenic views.</li>
-                <li>Desert Raceway - Wide, open spaces perfect for high-speed drifting.</li>
-                <li>Urban Streets - A mix of turns and straightaways ideal for street drifting.</li>
-            </ul>
-        </section>
-
-       
-        <section id="events">
-            <h2>Upcoming Events</h2>
-            <table border="1">
+            <h3>My Ranking of Sport Cars</h3>
+            <table>
                 <thead>
                     <tr>
-                        <th>Event</th>
-                        <th>Date</th>
-                        <th>Location</th>
+                        <th>Rank</th>
+                        <th>Car</th>
+                        <th>Model</th>
+                        <th>Engine</th>
+                        <th>Performance</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Summer Drift Fest</td>
-                        <td>June 5, 2025</td>
-                        <td>Mountain Drift Circuit</td>
+                        <td>1</td>
+                        <td>Porsche 911</td>
+                        <td>992</td>
+                        <td>3.0L Twin-Turbo Flat-6</td>
+                        <td>Iconic design, exceptional performance</td>
                     </tr>
                     <tr>
-                        <td>Desert Drift Challenge</td>
-                        <td>July 15, 2025</td>
-                        <td>Desert Raceway</td>
+                        <td>2</td>
+                        <td>Chevrolet Corvette</td>
+                        <td>C8</td>
+                        <td>6.2L V8</td>
+                        <td>Outstanding power, mid-engine layout</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ford Mustang</td>
+                        <td>GT</td>
+                        <td>5.0L V8</td>
+                        <td>Classic American muscle with modern tech</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>BMW M3</td>
+                        <td>G80</td>
+                        <td>3.0L Twin-Turbo Inline-6</td>
+                        <td>Perfect blend of luxury and performance</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Nissan GT-R</td>
+                        <td>R35</td>
+                        <td>3.8L Twin-Turbo V6</td>
+                        <td>Legendary AWD performance, track-ready</td>
                     </tr>
                 </tbody>
             </table>
+            <p>These are my top picks for sport cars based on performance, style, and personal preference. Each car has its unique charm and characteristics, making them stand out in the drifting community.</p>
         </section>
 
-    
+        <section id="when">
+            <h2>When to Drift</h2>
+            <figure>
+                <img src="images/Trackwithcarsdrifting.jpg" alt="A drifting event in progress">
+                <figcaption>A drifting event in progress</figcaption>
+                <figcaption><em>Image generated using AI with the prompt: "A drifting event with multiple cars on the track"</em></figcaption>
+            </figure>
+            <p>The best times to drift are during organized events, usually held on weekends or during specific seasons when the weather is optimal for drifting.</p>
+            <p>These events provide a safe and controlled environment for drivers to practice and showcase their drifting skills.</p>
+        </section>
+
+        <section id="where">
+            <h2>Where to Drift</h2>
+            <figure>
+                <img src="images/Track.jpg" alt="A dedicated drifting track">
+                <figcaption>A dedicated drifting track</figcaption>
+                <figcaption><em>Image generated using AI with the prompt: "A professional drifting track with a car in the background"</em></figcaption>
+            </figure>
+            <p>Drifting can be done on various types of tracks, including dedicated drifting circuits, mountain passes, and even urban streets.</p>
+            <p>Each location offers a unique experience and challenges for drivers to master.</p>
+        </section>
+
         <section id="how">
-            <h2>How It Works</h2>
-            <p>Drifting requires a perfect balance of throttle, steering, and brake control. The driver needs to initiate the drift by steering the car into a corner while applying the throttle, causing the rear tires to lose traction.</p>
-            <p>Mastering drifting takes practice, coordination, and understanding of car dynamics.</p>
+            <h2>How to Drift</h2>
+            <figure>
+                <img src="images/Driftingtips.jpg" alt="Tips for improving drifting skills">
+                <figcaption>Tips for improving drifting skills</figcaption>
+                <figcaption><em>Image generated using AI with the prompt: "A picture showing drifting techniques and tips"</em></figcaption>
+            </figure>
+            <p>Drifting requires practice, skill, and a solid understanding of car dynamics. Key techniques include:</p>
+            <ul>
+                <li>Throttle control</li>
+                <li>Steering input</li>
+                <li>Weight transfer</li>
+                <li>Clutch kicking</li>
+            </ul>
+            <p>It's essential to practice in a safe environment, preferably under the guidance of experienced drivers.</p>
         </section>
 
-        
         <section id="why">
-            <h2>Why I Love Drifting</h2>
-            <p>Drifting gives me the freedom to express myself on the road, push my limits, and experience the thrill of speed with complete control.</p>
-            <p>The community around drifting is also incredibly supportive, and it's a lifestyle that promotes camaraderie and shared excitement.</p>
+            <h2>Why Drift?</h2>
+            <figure>
+                <img src="images/Driftingpassion.jpg" alt="A passionate drifter">
+                <figcaption>A passionate drifter</figcaption>
+                <figcaption><em>Image generated using AI with the prompt: "A person enjoying drifting and the thrill it brings"</em></figcaption>
+            </figure>
+            <p>Drifting is more than just a driving style; it's a way to express creativity and individuality behind the wheel. It fosters a strong sense of community among enthusiasts and allows drivers to connect with their cars in a unique way.</p>
+            <p>Whether it's the thrill of competition or the joy of simply mastering a technique, drifting offers a rewarding experience for those who embrace it.</p>
         </section>
     </main>
 
     <footer>
-        <div data-include="components/footer.html"></div>  
-    </footer>
+        <span>Page designed by <a href="aadesignltd.com/">Awkward Alpacas</a> &copy;2024, <a href="https://www.freecodecamp.org/certification/AhmadA01/responsive-web-design" target="_blank"><em>Certified in Responsive Web Design, </em><a href="https://www.freecodecamp.org/certification/AhmadA01/javascript-algorithms-and-data-structures-v8"><em>Certified in JS</em></a></span>
+        <div>
+            <a id="validation-link-html">
+                <img src="images/validation_html.gif" alt="Validate HTML">
+            </a>
+            <a id="validation-link-css">
+                <img src="images/validation_css.gif" alt="Validate CSS">
+            </a>
+            <a id="validation-link-accessibility" href="https://wave.webaim.org/report?url=" target="_blank">
+                <img src="images/validation_accessibility.png" alt="Check Accessibility">
+            </a>
             
+        </div>
+        <script>
+            document.getElementById("validation-link-html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+            document.getElementById("validation-link-css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+            document.getElementById("validation-link-accessibility").setAttribute("href", "https://wave.webaim.org/report?url=" + location.href);
+        </script>
+       
+    </footer>
 
     <script>
-        
         function showSection(sectionId) {
-            var sections = document.querySelectorAll('section');
-            sections.forEach(function (section) {
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => {
                 section.classList.remove('active');
             });
             document.getElementById(sectionId).classList.add('active');
@@ -200,6 +287,7 @@
 </body>
 
 </html>
+
 
 
 
