@@ -7,7 +7,6 @@
     <link href="styles/default.css" rel="stylesheet">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <script src="scripts/survey.js" defer></script>
-    
 </head>
 <body>
     <header>
@@ -24,11 +23,13 @@
             <label for="mascot">Mascot:</label>
             <input type="text" id="mascot" required><br>
 
-            <label for="image">Image (PNG/JPG):</label>
-            <input type="file" id="image" accept="image/png, image/jpeg" required><br>
+            <div class="image-container">
+                <label for="image">Image (PNG/JPG):</label>
+                <input type="file" id="image" accept="image/png, image/jpeg" required><br>
 
-            <label for="imagecaption">Image Caption:</label>
-            <input type="text" id="imagecaption" required><br>
+                <label for="imagecaption">Image Caption:</label>
+                <input type="text" id="imagecaption" required><br>
+            </div>
 
             <label for="personalbackground">Personal Background:</label>
             <textarea id="personalbackground" required></textarea><br>
@@ -47,9 +48,12 @@
 
             <label for="courses">Courses currently taking:</label>
             <div id="coursecontainer">
-                <input type="text" class="course" placeholder="Enter a course">
+                <div class="course-entry">
+                    <input type="text" class="course" placeholder="Enter a course">
+                    <input type="text" class="course-reason" placeholder="Why taking this course">
+                </div>
             </div>
-            <button type="button">Add Course</button><br>
+            <button type="button" id="addcoursebutton">Add Course</button><br>
 
             <label for="funnything">Funny thing?</label>
             <textarea id="funnything"></textarea><br>
