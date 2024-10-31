@@ -8,7 +8,7 @@
     <title>Sport Cars and Drifting Community</title>
     
     <style>
-        body {
+       body {
             font-family: 'Arial', sans-serif;
             background-color: #F0F8FF;
             color: #333;
@@ -21,15 +21,31 @@
             text-align: center;
             min-height: 100vh;
         }
+        ul {
+            padding-left: 25px; 
+            margin: 20px 0;
+            text-align: left;     
+            list-style-type: disc; 
+        }
+
+        li {
+            margin: 10px 0;
+            padding-left: 1.2em;
+            text-indent: 0; 
+        }
+        ol {
+            text-align: left;
+        }
+
 
         header, footer {
             width: 100%;
             text-align: center;
+            box-sizing: border-box;
         }
 
         main {
             max-width: 800px;
-            width: 100%;
             padding: 20px;
         }
 
@@ -39,7 +55,7 @@
             display: none; 
         }
 
-        section.active {
+        .active {
             display: block;
         }
 
@@ -86,6 +102,10 @@
 
         footer a {
             color: white;
+        
+        
+        }
+        footer div a{
             text-decoration: none;
         }
 
@@ -110,19 +130,51 @@
             background-color: #4682B4;
             color: white;
         }
+
+        
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            max-width: 100%;
+            margin: 20px 0;
+        }
+
+        .calendar div {
+            padding: 15px;
+            background-color: #e0f7ff;
+            border: 1px solid #4682B4;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .calendar .day-name {
+            background-color: #4682B4;
+            color: white;
+            font-weight: bold;
+        }
+
+        .calendar .event {
+            background-color: #87cefa;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
     </style>
+  
 </head>
 
 <body>
     <header>
         <h1>Sport Cars and Drifting Community</h1>
         <nav aria-label="Main navigation">
-            <a href="#what" onclick="showSection('what')">Home</a>
-            <a href="#who" onclick="showSection('who')">About Me</a>
-            <a href="#when" onclick="showSection('when')">When</a>
-            <a href="#where" onclick="showSection('where')">Where</a>
-            <a href="#how" onclick="showSection('how')">How</a>
-            <a href="#why" onclick="showSection('why')">Why</a>
+            <a href="#what" class="nav-link" data-section="what">Home</a>
+            <a href="#who" class="nav-link" data-section="who">About Me</a>
+            <a href="#when" class="nav-link" data-section="when">When</a>
+            <a href="#where" class="nav-link" data-section="where">Where</a>
+            <a href="#how" class="nav-link" data-section="how">How</a>
+            <a href="#why" class="nav-link" data-section="why">Why</a>
         </nav>
     </header>
 
@@ -132,10 +184,26 @@
             <figure>
                 <img src="images/Sportcaronthetrack.jpg" alt="A car performing a drift at a competition">
                 <figcaption>A car performing a drift at a competition</figcaption>
+                <br>
                 <figcaption><em>Image generated using AI with the prompt: "A car drifting on a racetrack during a competition"</em></figcaption>
             </figure>
-            <p>Drifting is a driving technique where the driver intentionally oversteers, causing a loss of traction in the rear wheels while maintaining control from entry to exit of a corner.</p>
-            <p>This thrilling motorsport has gained immense popularity worldwide, with numerous competitions and events dedicated to it.</p>
+            <p>Drifting is a driving technique where the driver intentionally oversteers, causing a loss of traction in the rear wheels while maintaining control from entry to exit of a corner. Originating in Japan, drifting has evolved into an internationally recognized motorsport that tests a driver's skill and precision.</p>
+            
+            <h3>The History of Drifting</h3>
+            <p>Drifting began in the mountainous roads of Japan during the 1970s, pioneered by drivers who would race down the winding slopes. These early street racers perfected the art of cornering with finesse, leading to the popularization of the technique. Eventually, professional events began emerging, with the first official drift event taking place in Japan in 1988. Today, drifting has a global following, with major competitions in the United States, Europe, and Asia.</p>
+        
+            <h3>Types of Drifting Events</h3>
+            <p>Modern drifting events come in various formats, from grassroots gatherings to internationally sanctioned competitions. Some of the most popular events include:</p>
+            <ul>
+                <li><strong>Professional Competitions:</strong> These events, like Formula Drift and D1 Grand Prix, bring together top drivers from around the world to compete in high-stakes rounds. Judging criteria often include speed, angle, line, and style.</li>
+                <li><strong>Grassroots Events:</strong> These are more accessible to amateurs and enthusiasts who want to experience the thrill of drifting in a less formal setting. Grassroots events offer a relaxed environment to practice and learn.</li>
+                <li><strong>Exhibition Shows:</strong> Drifting exhibitions are usually held as part of car shows or auto expos, where skilled drivers perform stunts and showcase their control to entertain crowds.</li>
+            </ul>
+        
+            <h3>The Culture of Drifting</h3>
+            <p>Drifting is not just a sport; it’s a lifestyle and a culture embraced by enthusiasts worldwide. The community is known for its camaraderie and passion for cars, mechanics, and the thrill of the sport. Many drivers customize their cars to enhance performance and style, often with unique paint jobs, graphics, and modifications. In addition to being a competition, drifting is an art form, allowing drivers to express their creativity on the track.</p>
+        
+            <p>This thrilling motorsport has gained immense popularity worldwide, with numerous competitions and events dedicated to it. Whether you're a spectator or a driver, the energy at a drifting event is contagious and promises an unforgettable experience.</p>
         </section>
 
         <section id="who">
@@ -143,6 +211,8 @@
             <figure>
                 <img src="images/Driftingcaratasunset.jpg" alt="My experience at a local drifting event">
                 <figcaption>My experience at a local drifting event</figcaption>
+                <br>
+                
                 <figcaption><em>Image generated using AI with the prompt: "A person enjoying a drifting event"</em></figcaption>
             </figure>
             <p>I’ve always been captivated by the vibrant energy of car meets, where enthusiasts gather to share their love for automobiles. The roar of powerful engines, the sparkle of meticulously polished exteriors, and the thrill of encountering distinctive vehicles create an atmosphere that’s truly electrifying. For me, it’s not just about the cars themselves; it’s the stories, the camaraderie, and the shared enthusiasm that make these gatherings special.</p>
@@ -207,10 +277,64 @@
             <figure>
                 <img src="images/Trackwithcarsdrifting.jpg" alt="A drifting event in progress">
                 <figcaption>A drifting event in progress</figcaption>
-                <figcaption><em>Image generated using AI with the prompt: "A drifting event with multiple cars on the track"</em></figcaption>
+                <br>
+                <figcaption><em>Image generated using AI with the prompt: "A picture of a car at drifting event in progress"</em></figcaption>
+
+                
             </figure>
-            <p>The best times to drift are during organized events, usually held on weekends or during specific seasons when the weather is optimal for drifting.</p>
-            <p>These events provide a safe and controlled environment for drivers to practice and showcase their drifting skills.</p>
+            <p>The best times to drift are during organized events, often held on weekends or during specific seasons. Here's a guide:</p>
+            <ul>
+                <li><strong>Spring &amp; Summer:</strong> Perfect for outdoor drifting due to dry weather and warm temperatures.</li>
+                <li><strong>Fall:</strong> Cooler temperatures make it easier on the engines and tires, plus beautiful seasonal backdrops.</li>
+                <li><strong>Winter:</strong> Challenging for seasoned drivers who want to test their skills on slippery surfaces.</li>
+            </ul>
+            <p>Most events occur on weekends, but private practice sessions can be scheduled year-round at certain tracks.</p>
+            
+           
+            <h3>Upcoming Drifting Events</h3>
+            <div class="calendar">
+                <div class="day-name">Sun</div>
+                <div class="day-name">Mon</div>
+                <div class="day-name">Tue</div>
+                <div class="day-name">Wed</div>
+                <div class="day-name">Thu</div>
+                <div class="day-name">Fri</div>
+                <div class="day-name">Sat</div>
+
+
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div class="event">5<br>Drift Day</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div class="event">9<br>Practice Session</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+                <div>13</div>
+                <div class="event">14<br>Track Open</div>
+                <div>15</div>
+                <div>16</div>
+                <div class="event">17<br>Local Competition</div>
+                <div>18</div>
+                <div>19</div>
+                <div>20</div>
+                <div>21</div>
+                <div>22</div>
+                <div class="event">23<br>Drift Meet</div>
+                <div>24</div>
+                <div>25</div>
+                <div>26</div>
+                <div>27</div>
+                <div class="event">28<br>Night Drift</div>
+                <div>29</div>
+                <div>30</div>
+                <div>31</div>
+            </div>
+        
         </section>
 
         <section id="where">
@@ -218,10 +342,46 @@
             <figure>
                 <img src="images/Track.jpg" alt="A dedicated drifting track">
                 <figcaption>A dedicated drifting track</figcaption>
+                <br>
+            
                 <figcaption><em>Image generated using AI with the prompt: "A professional drifting track with a car in the background"</em></figcaption>
             </figure>
-            <p>Drifting can be done on various types of tracks, including dedicated drifting circuits, mountain passes, and even urban streets.</p>
-            <p>Each location offers a unique experience and challenges for drivers to master.</p>
+            <h3>Popular Drift Locations</h3>
+            <ul>
+                <li>
+                    <strong>🏁 Atlanta Motor Speedway:</strong> Known for its thrilling drifting events and competitions.
+                </li>
+                <li>
+                    <strong>🏁 Irwindale Speedway:</strong> Famous for its professional drifting competitions.
+                </li>
+                <li>
+                    <strong>🏁 Ebisu Circuit:</strong> Located in Japan, a must-visit for any drift enthusiast.
+                </li>
+                <li>
+                    <strong>🏁 Silverstone Circuit:</strong> A renowned track that hosts various motorsport events.
+                </li>
+                <li>
+                    <strong>🏁 Formula Drift:</strong> A series of competitions held in various locations worldwide.
+                </li>
+            </ul>
+            <h3>Local Drift Spots</h3>
+            <ul>
+                <li>
+                    <strong>🏁 Local Park Parking Lot:</strong> A spacious area perfect for practice sessions on weekends.
+                </li>
+                <li>
+                    <strong>🏁 Abandoned Warehouse:</strong> A popular spot for underground drifting events.
+                </li>
+                <li>
+                    <strong>🏁 Community Race Track:</strong> Check local schedules for drifting events open to the public.
+                </li>
+                <li>
+                    <strong>🏁 High School Parking Lot:</strong> Ideal for late-night drifting sessions when empty.
+                </li>
+                <li>
+                    <strong>🏁 Industrial Area:</strong> Offers open spaces for private drifting gatherings.
+                </li>
+            </ul>
         </section>
 
         <section id="how">
@@ -229,16 +389,29 @@
             <figure>
                 <img src="images/Driftingtips.jpg" alt="Tips for improving drifting skills">
                 <figcaption>Tips for improving drifting skills</figcaption>
+                <br>
                 <figcaption><em>Image generated using AI with the prompt: "A picture showing drifting techniques and tips"</em></figcaption>
             </figure>
-            <p>Drifting requires practice, skill, and a solid understanding of car dynamics. Key techniques include:</p>
-            <ul>
-                <li>Throttle control</li>
-                <li>Steering input</li>
-                <li>Weight transfer</li>
-                <li>Clutch kicking</li>
-            </ul>
-            <p>It's essential to practice in a safe environment, preferably under the guidance of experienced drivers.</p>
+            <p>If you're interested in exploring the world of drifting, here are some tips to get started:</p>
+            <ol>
+                <li><strong>Research:</strong> Familiarize yourself with drifting techniques and terminology.</li>
+                <li><strong>Join a Community:</strong> Connect with local drifting clubs and attend events.</li>
+                <li><strong>Practice:</strong> Find a safe and controlled environment to practice your drifting skills.</li>
+                <li><strong>Invest in a Drift Car:</strong> Consider a car that is popular in the drifting community.</li>
+                <li><strong>Take Lessons:</strong> Consider taking professional drifting lessons for guidance.</li>
+            </ol>
+            <h3>Steps to Drift</h3>
+            <p>Once you're ready to try drifting, follow these steps:</p>
+            <ol>
+                <li><strong>Find the Right Location:</strong> Look for a wide, open space with a smooth surface, such as an empty parking lot or a track.</li>
+                <li><strong>Warm Up Your Tires:</strong> Drive your car in circles to heat up the tires, which helps improve grip when you begin drifting.</li>
+                <li><strong>Approach the Turn:</strong> As you approach a corner, gain speed (ideally between 30-50 mph) while positioning your car toward the outside of the turn.</li>
+                <li><strong>Initiate the Drift:</strong> Use the "clutch kick" method: press the clutch pedal, rev the engine, and quickly release the clutch to break traction.</li>
+                <li><strong>Steer into the Drift:</strong> Turn the steering wheel in the direction of the turn while modulating the throttle to maintain control and angle.</li>
+                <li><strong>Countersteer:</strong> As the back of the car begins to slide out, countersteer (turn the wheel in the opposite direction) to regain control.</li>
+                <li><strong>Throttle Control:</strong> Adjust the throttle as needed to maintain the drift. Too much throttle can cause you to spin out, while too little can let the grip return.</li>
+                <li><strong>Exit the Drift:</strong> As you complete the turn, straighten the steering wheel and gradually ease off the throttle to regain full traction.</li>
+            </ol>
         </section>
 
         <section id="why">
@@ -246,15 +419,33 @@
             <figure>
                 <img src="images/Driftingpassion.jpg" alt="A passionate drifter">
                 <figcaption>A passionate drifter</figcaption>
+                <br>
+                
                 <figcaption><em>Image generated using AI with the prompt: "A person enjoying drifting and the thrill it brings"</em></figcaption>
             </figure>
-            <p>Drifting is more than just a driving style; it's a way to express creativity and individuality behind the wheel. It fosters a strong sense of community among enthusiasts and allows drivers to connect with their cars in a unique way.</p>
-            <p>Whether it's the thrill of competition or the joy of simply mastering a technique, drifting offers a rewarding experience for those who embrace it.</p>
+            <p>Drifting is more than just a motorsport; it’s a way to express creativity and showcase driving skills. Here are some reasons why drifting captivates so many:</p>
+            <ul>
+                <li>🔧 <strong>Adrenaline Rush:</strong> The thrill of drifting provides an unparalleled excitement.</li>
+                <li>🎨 <strong>Creative Expression:</strong> Drivers can express themselves through their driving style and vehicle modifications.</li>
+                <li>🤝 <strong>Community:</strong> The drifting community is welcoming, fostering friendships and connections.</li>
+                <li>🏆 <strong>Competitive Spirit:</strong> Drifting events provide a platform for drivers to showcase their skills.</li>
+                <li>🚗 <strong>Passion for Cars:</strong> Drifting allows enthusiasts to connect with their vehicles in a unique way.</li>
+            </ul>
         </section>
     </main>
 
     <footer>
-        <span>Page designed by <a href="aadesignltd.com/">Awkward Alpacas</a> &copy;2024, <a href="https://www.freecodecamp.org/certification/AhmadA01/responsive-web-design" target="_blank"><em>Certified in Responsive Web Design, </em><a href="https://www.freecodecamp.org/certification/AhmadA01/javascript-algorithms-and-data-structures-v8"><em>Certified in JS</em></a></span>
+        <p>
+            <span>
+                Page designed by <a href="../aadesignltd.com/">Awkward Alpacas</a> &copy;2024,
+                <a href="https://www.freecodecamp.org/certification/AhmadA01/responsive-web-design" target="_blank">
+                    <em>Certified in Responsive Web Design</em>
+                </a>, 
+                <a href="https://www.freecodecamp.org/certification/AhmadA01/javascript-algorithms-and-data-structures-v8" target="_blank">
+                    <em>Certified in JS</em>
+                </a>
+            </span>
+        </p>
         <div>
             <a id="validation-link-html">
                 <img src="images/validation_html.gif" alt="Validate HTML">
@@ -276,14 +467,18 @@
     </footer>
 
     <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('main section');
-            sections.forEach(section => {
-                section.classList.remove('active');
+        document.querySelectorAll('.nav-link').forEach((link) => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                document.querySelectorAll('section').forEach((section) => {
+                    section.classList.remove('active');
+                });
+                const sectionToShow = document.querySelector(this.getAttribute('href'));
+                sectionToShow.classList.add('active');
             });
-            document.getElementById(sectionId).classList.add('active');
-        }
+        });
     </script>
+   
 </body>
 
 </html>
