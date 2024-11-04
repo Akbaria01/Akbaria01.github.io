@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Get Involved - AAPANC</title>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="AAPANC Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html">Projects & Events</a></li>
+                <li><a href="get-involved.html">Get Involved</a></li>
+                <li><a href="gallery.html">Media Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Get Involved</h1>
+        
+        <h2>Volunteer Opportunities</h2>
+        <ul>
+            <li><strong>Event Coordinator:</strong> Help organize community events.</li>
+            <li><strong>Social Media Manager:</strong> Manage our online presence and engagement.</li>
+            <li><strong>Fundraising Volunteer:</strong> Assist with fundraising campaigns.</li>
+        </ul>
+
+        <h2>Donate</h2>
+        <form action="donate.php" method="POST">
+            <label for="amount">Donation Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+            <label for="frequency">Frequency:</label>
+            <select id="frequency" name="frequency">
+                <option value="one-time">One-time</option>
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+            </select>
+            <button type="submit">Donate</button>
+        </form>
+    </main>
+    <footer>
+        <p>Contact: info@aapanc.org | (123) 456-7890</p>
+    </footer>
+</body>
+</html>
