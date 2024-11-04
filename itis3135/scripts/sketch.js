@@ -5,6 +5,26 @@ function setup() {
     colorMode(HSB);  
     angleMode(DEGREES);  
 }
+function branch(h, level, angle) {
+    stroke(level * 25, 255, 255); 
+    h *= 0.66; 
+
+    if (h > 2) { 
+        push();           
+        rotate(angle); 
+        line(0, 0, 0, -h); 
+        translate(0, -h); 
+        branch(h, level + 1, angle); 
+        pop();            
+
+        push();          
+        rotate(-angle); 
+        line(0, 0, 0, -h);
+        translate(0, -h);
+        branch(h, level + 1, angle); 
+        pop();
+    }
+}
 
 function draw() {
     background(0);  
@@ -33,23 +53,3 @@ function draw() {
     pop();
 }
 
-function branch(h, level, angle) {
-    stroke(level * 25, 255, 255); 
-    h *= 0.66; 
-
-    if (h > 2) { 
-        push();           
-        rotate(angle); 
-        line(0, 0, 0, -h); 
-        translate(0, -h); 
-        branch(h, level + 1, angle); 
-        pop();            
-
-        push();          
-        rotate(-angle); 
-        line(0, 0, 0, -h);
-        translate(0, -h);
-        branch(h, level + 1, angle); 
-        pop();
-    }
-}
