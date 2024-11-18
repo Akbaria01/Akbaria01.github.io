@@ -3,48 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Projects & Events - AAPANC</title>
+    <link href="styles/project.css" rel="stylesheet">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <title>Projects &amp; Events - AAPANC</title>
+
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="AAPANC Logo">
+        <img src="images/logo.png" alt="AAPANC Logo" id="logo">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="projects.html">Projects & Events</a></li>
+                <li><a href="projects.html">Projects &amp; Events</a></li>
                 <li><a href="get-involved.html">Get Involved</a></li>
                 <li><a href="gallery.html">Media Gallery</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <h1>Projects & Events</h1>
+        <section class="welcome-section img3">
+        <div class="shadowbox">
+        <h1>Projects &amp; Events</h1>
+        <p>The Afghan-American and Pashai Association of North Carolina (AAPANC) is dedicated to empowering and uniting our community through impactful projects and cultural events. Our initiatives focus on providing support, celebrating Afghan and Pashai heritage, and creating a sense of belonging. Explore our ongoing projects and upcoming events to see how we’re making a difference and how you can be part of our journey.</p>
+        </div>
+        </section>
+
+        <section class="upcoming-events">
         
         <h2>Current Projects</h2>
-        <ul>
-            <li>
-                <strong>Community Development Project</strong>
-                <p>Description of the project, its goals, and current status.</p>
-                <img src="project1.jpg" alt="Community Development Project">
+        <ul class="listlist">
+            <li class="event-card">
+                <strong>• Community Development Project</strong>
+                <p>This project aims to provide resources and support for Afghan-American families settling in North Carolina, including job placement, language assistance, and community gatherings. Current focus: Expanding outreach to additional regions in North Carolina.</p>
+                <img src="images/project1.jpg" alt="Community Development Project">
             </li>
-            <li>
-                <strong>Cultural Preservation Initiative</strong>
-                <p>Description of the initiative, its goals, and current status.</p>
-                <img src="project2.jpg" alt="Cultural Preservation Initiative">
+            <li class="event-card">
+                <strong>• Cultural Preservation Initiative</strong>
+                <p>Dedicated to preserving Afghan heritage, this initiative focuses on documenting and sharing Pashai traditions through cultural events, educational workshops, and digital archives. Current focus: Launching the Afghan Heritage Digital Archive.</p>
+                <img src="images/project2.jpg" alt="Cultural Preservation Initiative">
+            </li>
+            <li class="event-card">
+                <strong>• Language Enrichment Program</strong>
+                <p>An educational program offering free online and in-person classes in Pashai and Pashto to help Afghan-American youth stay connected to their roots. Current focus: Recruiting volunteer teachers and expanding the curriculum.</p>
+                <img src="images/project3.jpg" alt="Language Enrichment Program">
             </li>
         </ul>
-
+    
+       </section>
+       <section class="upcoming-events">
         <h2>Upcoming Events</h2>
-        <p>Check our calendar for upcoming events!</p>
-        <div class="calendar">
-            
-        </div>
+
+    <table class="event-card event-calendar">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Event</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>March 21</td>
+            <td>Afghan Cultural Day</td>
+            <td>Celebrate Afghan culture with traditional food, music, and dance performances.</td>
+        </tr>
+        <tr>
+            <td>November 20</td>
+            <td>Language Workshop</td>
+            <td>Join our workshop to learn Pashai and Pashto, designed for all levels.</td>
+        </tr>
+        <tr>
+            <td>May 4</td>
+            <td>Community Networking Event</td>
+            <td>A networking event for Afghan-American families and community leaders.</td>
+        </tr>
+    </tbody>
+</table>
+    </section>
     </main>
+
     <footer>
-        <p>Contact: info@aapanc.org | (123) 456-7890</p>
+        <p>Contact us at: <a href="mailto:info@aapanc.org">info@aapanc.org</a> | <a href="tel:+11234567890">(123) 456-7890</a></p>
+        <address><a href="https://www.google.com/maps/search/?api=1&query=808+Atwater+St,+Raleigh,+NC+27607" target="_blank">808 Atwater St, Raleigh, NC 27607</a></address>
+        <p>&copy; 2024 AAPANC | Celebrating Afghan and Pashai heritage, community, and culture</p>
     </footer>
 </body>
 </html>
