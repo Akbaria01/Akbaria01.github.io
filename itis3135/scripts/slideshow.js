@@ -1,7 +1,7 @@
 $(document).ready(function(){
     let images = [
         { 
-            src: "images/Alpaca.png", 
+            src: "images/Alpaca.jpeg", 
             caption: "A - for Alpaca", 
             aiPrompt: "A high-quality image of an alpaca"
         },

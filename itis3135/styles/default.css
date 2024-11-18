@@ -46,6 +46,17 @@ a {
   font-size: 1.1em;
   font-weight: 550;
 }
+#slideshow {
+  display: inline-block; 
+  text-align: center; 
+}
+
+#slide-img {
+  max-width: 70%; 
+  height: auto; 
+  margin: 0 auto; 
+  display: block; 
+}
 
 .center {
   text-align: center;
