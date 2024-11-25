@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/project.css" rel="stylesheet">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <title>Get Involved - AAPANC</title>
+    <script src="scripts/forms.js"></script>
+    <title>Get Involved || AAPANC</title>
     
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="AAPANC Logo">
+        <img src="images/logo.png" alt="AAPANC Logo" id="logo">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="projects.html">Projects & Events</a></li>
+                <li><a href="projects.html">Projects &amp; Events</a></li>
                 <li><a href="get-involved.html">Get Involved</a></li>
                 <li><a href="gallery.html">Media Gallery</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -24,23 +25,28 @@
     </header>
     
     <main>
-        <h1>Get Involved</h1>
+        <section class="welcome-section img4">
+            <div class="shadowbox"><h1>Get Involved</h1>
+            </div>
+        </section>
         
+        <section class="announcements">
         <h2>Volunteer Opportunities</h2>
-        <ul>
-            <li><strong>Event Coordinator:</strong> Help organize community events and ensure smooth execution.</li>
-            <li><strong>Fundraising Volunteer:</strong> Support fundraising efforts and assist with campaigns and outreach.</li>
-            <li><strong>Community Outreach Volunteer:</strong> Connect with local organizations to expand our impact.</li>
-            <li><strong>Graphic Designer:</strong> Design promotional materials and visuals for our events and campaigns.</li>
-        </ul>
+            <ul>
+                <li><strong>Event Coordinator:</strong> Help organize community events and ensure smooth execution.</li>
+                <li><strong>Fundraising Volunteer:</strong> Support fundraising efforts and assist with campaigns and outreach.</li>
+                <li><strong>Community Outreach Volunteer:</strong> Connect with local organizations to expand our impact.</li>
+                <li><strong>Graphic Designer:</strong> Design promotional materials and visuals for our events and campaigns.</li>
+            </ul>
+        </section>
         
-        <form class="volunteer-form" action="volunteer_application.php" method="POST">
+        <form class="volunteer-form" id="volunteer-form" method="POST">
             <h2>Volunteer Application</h2>
             <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="volunteer-name" name="name" required>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="volunteer-email" name="email" required>
 
             <label for="interest">Area of Interest:</label>
             <select id="interest" name="interest" required>
@@ -56,9 +62,10 @@
             
             <button type="submit">Apply Now</button>
         </form>
+        <p id="volunteer-message"></p>
 
         <h2>Donate</h2>
-        <form class="donation-form" action="donate.php" method="POST">
+        <form class="donation-form" id="donation-form" method="POST">
             <label for="amount">Donation Amount:</label>
             <input type="number" id="amount" name="amount" required>
             
@@ -70,10 +77,10 @@
             </select>
 
             <label for="name">Full Name:</label>
-            <input type="text" id="name" name="donor_name" required>
+            <input type="text" id="dontation-name" name="donorname" required>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="donor_email" required>
+            <input type="email" id="donation-email" name="donoremail" required>
 
             <label for="payment-method">Payment Method:</label>
             <select id="payment-method" name="payment_method" required>
@@ -84,6 +91,7 @@
 
             <button type="submit">Donate</button>
         </form>
+        <p id="donation-message"></p>
     </main>
 
     <footer>

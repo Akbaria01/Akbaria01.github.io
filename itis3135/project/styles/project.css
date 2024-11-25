@@ -14,6 +14,14 @@ body {
     color: var(--dark-blue);
     margin: 0;
     line-height: 1.6;
+    max-width: 100vw;
+    box-sizing: border-box;
+
+}
+main{
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
 }
 h1 {
     font-size: 2.5em;
@@ -106,6 +114,16 @@ nav ul li a:hover {
     background: url('../images/projects_events.jpg') center center/cover no-repeat;
 
 }
+.img4{
+    background: url('../images/involved.jpg') center center/cover no-repeat;
+}
+.img5{
+    background: url('../images/afghanf.jpg') center center/cover no-repeat;
+}
+.img6{
+    background: url('../images/contact.jpg') center center/cover no-repeat;
+}
+
 
 .mission-statement {
     font-size: 1.3em;
@@ -246,13 +264,23 @@ footer {
 }
 .map {
     text-align: center;
-    margin: 30px 0;
+    background-color: var(--cream);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    border-top: 6px solid var(--deep-red);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+
 }
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+.map iframe{
+    width: 90%;
+    height: 500px;
 }
+
 figure {
     margin: 0;
     text-align: center;
@@ -266,13 +294,7 @@ figure img {
     height: auto;
     display: block;
 }
-figcaption {
-    background-color: var(--dark-blue);
-    color: var(--cream);
-    padding: 10px;
-    font-size: 1em;
-    font-weight: bold;
-}
+
 li strong {
     color: var(--deep-red);
 }
@@ -335,3 +357,87 @@ label {
 td {
     vertical-align: top;
 }
+
+#album-menu {
+    margin-bottom: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+
+
+}
+.gallery-card{
+    max-width: 80%;
+
+}
+
+#album-menu button {
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20%;
+    box-sizing: border-box;
+
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: 300px;
+    width: 300px;
+    background-color: #000;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    display:none;
+    text-align: center;
+
+}
+#volunteer-message{
+    display: none; 
+    color: green;
+    text-align: center;
+
+}
+#donation-message{
+    display:none;
+    color: green;
+    text-align: center;
+}
+.contact-card{
+    max-width: 860px;
+} 
+
+
+
+
+
+
+
+
+

@@ -1,60 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>von Briesen's Validating WEB Template</title>
-    
-    
-    <!--     
-        Structure of HTML5 semantic layout swiped from PHP Fiddle and modified
-        to include validing code and validation buttons and some other tweaks
-
-        +===================================+
-        |               header              |
-        +===================================+
-        |                 nav               |
-        +=====================+=============+
-        |                     |             |
-        |       section       |    aside    |
-        |
-        +=====================+=============+    
-        |          footer/tagline           |
-        |         validation buttons        |
-        +===================================+
-        
-        The code from Internet
-        
-        http://phpfiddle.org   
-    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+        }
+
+        header {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .validation-icons {
+            margin-top: 10px;
+        }
+
+        .validation-icons img {
+            width: 80px;
+            margin: 0 10px;
+        }
+
+        #game-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            margin-top: 30px;
+            border: 2px solid blue;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        #alpaca {
+            position: absolute;
+            width: 100px;
+            cursor: pointer;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: left 1s ease, top 1s ease;
+        }
+
+        .score {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #game-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #game-buttons button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin: 5px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #game-buttons button:hover {
+            background-color: blue;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
-            <h1>Header</h1>
-            <h2>Subheader</h2>
+        <h1>Welcome to My Personal Website</h1>
+        <h2>Explore My Projects and More!</h2>
+        <h3>Please Click on "ITIS3135 Page" link below!</h3>
     </header>
+
     <nav>
         <ul>
-            <li><a href="./itis3135/">itis3135 page</a></li>
-            <li><a href="#">next page</a></li>
+            <li><a href="./itis3135/">ITIS3135 Page</a></li>
         </ul>
     </nav>
-    <footer> 
-       Bazzom bazang... we do the bestest! 
-       <br>Designed by &copy;Icabad Enterprises
-       <br>
-        <a id="validation-link-html">
-            <img src="images/validation_html.gif" alt="Validate HTML">
-        </a>
-       
-        <a id="validation-link-css">
-            <img src="images/validation_css.gif" alt="Validate CSS">
-        </a>
+
+    <div id="game-container">
+        <img id="alpaca" src="https://via.placeholder.com/100x100.png?text=Alpaca" alt="Alpaca">
+        <div class="score" id="score">Score: 0</div>
+    </div>
+
+    <div id="game-buttons">
+        <button id="start-button">Start Game</button>
+        <button id="pause-button">Pause Game</button>
+    </div>
+
+    <footer>
+        <p>Page designed by Awkward Alpacas &copy;2024</p>
     </footer>
+
     <script>
-        document.getElementById("validation-link-html").setAttribute("href", "https://validator.w3.org/check?uri="+location.href);
-        document.getElementById("validation-link-css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri="+location.href);
+        let score = 0;
+        let gameInterval;
+        let gameRunning = false;
+        const alpaca = document.getElementById("alpaca");
+        const scoreDisplay = document.getElementById("score");
+        const gameContainer = document.getElementById("game-container");
+
+        function moveAlpaca() {
+            const maxX = gameContainer.clientWidth - alpaca.clientWidth;
+            const maxY = gameContainer.clientHeight - alpaca.clientHeight;
+
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+
+         
+            alpaca.style.left = randomX + "px";
+            alpaca.style.top = randomY + "px";
+        }
+
+        function startGame() {
+            gameRunning = true;
+            score = 0;
+            scoreDisplay.textContent = "Score: " + score;
+            moveAlpaca(); 
+            gameInterval = setInterval(moveAlpaca, 2000); 
+        }
+
+        function pauseGame() {
+            gameRunning = false;
+            clearInterval(gameInterval);
+        }
+
+        alpaca.addEventListener("click", function () {
+            if (gameRunning) {
+                score++;
+                scoreDisplay.textContent = "Score: " + score;
+                moveAlpaca();
+            }
+        });
+
+        document.getElementById("start-button").addEventListener("click", startGame);
+        document.getElementById("pause-button").addEventListener("click", pauseGame);
     </script>
 </body>
+
 </html>
+
+
+
