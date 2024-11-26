@@ -241,6 +241,10 @@ caption {
     text-align: center;
   }
 }
+#peer-info {
+  text-align: center;
+  font-size: smaller;
+}
 
 
 
