@@ -79,4 +79,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-window.onload = () => loadAlbum('cultural');
+window.onload = () => loadAlbum('cultural'); 
+

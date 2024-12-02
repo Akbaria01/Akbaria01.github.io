@@ -1,26 +1,27 @@
 {
-    "title": "Ahmad Akbari's Awkward Alpacas || ITIS3135",
-    "nmainNav": [
-    { "name": "Home", "url": "index.html" },
-    { "name": "Introduction", "url": "introduction.html" },
-    { "name": "Contract", "url": "contract.html" },
-    { "name": "About", "url": "about.html" },
-    { "name": "Website Evaluations", "url": "website_evaluations.html" },
-    { "name": "Tables", "url": "tables.html" },
-    { "name": "Forms", "url": "forms.html" },
-    { "name": "Project Overview", "url": "project_overview.html" },
-    { "name": "First JavaScripts", "url": "firstscripts.html" },
-    { "name": "BYO", "url": "byo_intro.html" },
-    { "name": "Drawing", "url": "drawing.html" },
-    { "name": "Slideshow Gallery", "url": "slideshow.html" }
-    ],
-    "secondaryNav": [
-    {"name": "My CRAPPY Web&Page", "url": "Stuff/My CRAPPY Web&Page.htm"},
-    {"name": "Hobby", "url": "hobby/"},
-    {"name": "Client Project", "url": "project/"}
+  "title": "Ahmad Akbari's Awkward Alpacas || ITIS3135",
+  "mainNav": [
+      { "name": "Home", "url": "index.html" },
+      { "name": "Introduction", "url": "introduction.html" },
+      { "name": "Contract", "url": "contract.html" },
+      { "name": "About", "url": "about.html" },
+      { "name": "Website Evaluations", "url": "website_evaluations.html" },
+      { "name": "Tables", "url": "tables.html" },
+      { "name": "Forms", "url": "forms.html" },
+      { "name": "Project Overview", "url": "project_overview.html" },
+      { "name": "First JavaScripts", "url": "firstscripts.html" },
+      { "name": "BYO", "url": "byo_intro.html" },
+      { "name": "Drawing", "url": "drawing.html" },
+      { "name": "Slideshow Gallery", "url": "slideshow.html" }
+  ],
+  "secondaryNav": [
+      { "name": "My CRAPPY Web&Page", "url": "Stuff/My CRAPPY Web&Page.htm" },
+      { "name": "Hobby", "url": "hobby/" },
+      { "name": "Client Project", "url": "project/" },
+      { "name": "Peer Review 1", "url": "review1.html" },
+      { "name": "Peer Review 2", "url": "review2.html" }
   ]
-
-
 }
+
 
 

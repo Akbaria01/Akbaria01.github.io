@@ -1,31 +1,27 @@
 {
-    "nav": {
-        "slogan": "Because awkward is the new awesome!",
-        "links": [
-            { "text": "University webpages", "url": "https://webpages.charlotte.edu/aakbari1/itis3135/" },
-            { "text": "GitHub.com", "url": "https://github.com/Akbaria01" },
-            { "text": "GitHub.io", "url": "https://github.com/Akbaria01/Akbaria01.github.io" },
-            { "text": "LinkedIn", "url": "https://www.linkedin.com/in/ahmad-akbari1/" },
-            { "text": "FreeCodeCamp", "url": "https://www.freecodecamp.org/AhmadA01" },
-            { "text": "Codecademy", "url": "https://www.codecademy.com/profiles/ajax1117604485" }
-        ]
-    },
-    "footer": {
-        "designedBy": "Awkward Alpacas",
-        "year": 2024,
-        "links": [
-            {
-                "text": "Certified in Responsive Web Design",
-                "url": "https://www.freecodecamp.org/certification/AhmadA01/responsive-web-design"
-            },
-            {
-                "text": "Certified in JS",
-                "url": "https://www.freecodecamp.org/certification/AhmadA01/javascript-algorithms-and-data-structures-v8"
-            }
-        ]
-    },
-    "validation": {
+    "slogan": "Because awkward is the new awesome!",
+    "year": 2024,
+    "contactLinks": [
+        { "name": "University webpages", "url": "https://webpages.charlotte.edu/aakbari1/itis3135/" },
+        { "name": "GitHub.com", "url": "https://github.com/Akbaria01" },
+        { "name": "GitHub.io", "url": "https://github.com/Akbaria01/Akbaria01.github.io" },
+        { "name": "LinkedIn", "url": "https://www.linkedin.com/in/ahmad-akbari1/" },
+        { "name": "FreeCodeCamp", "url": "https://www.freecodecamp.org/AhmadA01" },
+        { "name": "Codecademy", "url": "https://www.codecademy.com/profiles/ajax1117604485" }
+    ],
+    "certifications": [
+        {
+            "text": "Certified in Responsive Web Design",
+            "url": "https://www.freecodecamp.org/certification/AhmadA01/responsive-web-design"
+        },
+        {
+            "text": "Certified in JS",
+            "url": "https://www.freecodecamp.org/certification/AhmadA01/javascript-algorithms-and-data-structures-v8"
+        }
+    ],
+    "validationLinks": {
         "html": "https://validator.w3.org/check?uri=",
         "css": "https://jigsaw.w3.org/css-validator/validator?uri="
     }
 }
+
