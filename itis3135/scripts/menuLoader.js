@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Load Header
-    fetch("header.json")
+    fetch("scripts/header.json")
         .then((response) => response.json())
         .then((headerData) => {
             const headerContainer = document.querySelector("header");
@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
             });
             headerContainer.appendChild(mainNav);
 
+            headerContainer.appendChild(document.createElement("hr"));
+
+
             // Add Secondary Navigation
             const secondaryNav = document.createElement("nav");
             headerData.secondaryNav.forEach((link) => {
@@ -33,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch((error) => console.error("Error loading header:", error));
 
     // Load Footer
-    fetch("footer.json")
+    fetch("scripts/footer.json")
         .then((response) => response.json())
         .then((footerData) => {
             const footerContainer = document.querySelector("footer");
@@ -43,27 +46,42 @@ document.addEventListener("DOMContentLoaded", () => {
             slogan.textContent = footerData.slogan;
             footerContainer.appendChild(slogan);
 
+            footerContainer.appendChild(document.createElement("hr"));
+
             // Add Contact Links
             const contactNav = document.createElement("nav");
             footerData.contactLinks.forEach((link) => {
                 const a = document.createElement("a");
                 a.href = link.url;
                 a.textContent = link.name;
-                contactNav.appendChild(a);
+                contactNav.appendChild(a); 
+                let dividers = document.createElement("span");
+                dividers.innerText = " || ";
+                contactNav.appendChild(dividers);
+                
             });
             footerContainer.appendChild(contactNav);
 
             // Add Certifications
+
             const certifications = document.createElement("p");
-            footerData.certifications.forEach((cert) => {
+            const certspan = document.createElement("span");
+            certspan.innerHTML = `Page designed by <a href="aadesignltd.com/">Awkward Alpacas</a> &copy;2024, `;
+            footerData.certifications.forEach((cert, i) => {
                 const a = document.createElement("a");
                 a.href = cert.url;
-                a.textContent = cert.text;
+
+                const b = document.createElement("em");
+
+                b.textContent = cert.text;
                 a.target = "_blank";
-                a.style.fontStyle = "italic";
-                certifications.appendChild(a);
-                certifications.append(" "); // Add space between certifications
+                a.appendChild(b);
+                certspan.appendChild(a);
+                if (i === 0)
+                certspan.append(" , "); // Add space between certifications
+
             });
+            certifications.appendChild(certspan);
             footerContainer.appendChild(certifications);
 
             // Add Validation Links

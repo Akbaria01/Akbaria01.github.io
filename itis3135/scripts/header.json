@@ -11,7 +11,7 @@
       { "name": "Project Overview", "url": "project_overview.html" },
       { "name": "First JavaScripts", "url": "firstscripts.html" },
       { "name": "BYO", "url": "byo_intro.html" },
-      { "name": "Drawing", "url": "drawing.html" },
+      { "name": "Interactive Drawing", "url": "drawing.html" },
       { "name": "Slideshow Gallery", "url": "slideshow.html" }
   ],
   "secondaryNav": [
