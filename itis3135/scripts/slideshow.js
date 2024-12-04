@@ -28,7 +28,7 @@ $(document).ready(function(){
         { 
             src: "images/Astronaut.jpg", 
             caption: "A - for Astronaut", 
-            aiPrompt: "An astronaut in in their space suit"
+            aiPrompt: "An astronaut in their space suit"
         },
         { 
             src: "images/Keyboard.jpg", 
