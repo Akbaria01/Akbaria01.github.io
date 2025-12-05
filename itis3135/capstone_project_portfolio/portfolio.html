@@ -6,8 +6,6 @@
     <title>Portfolio – Ahmad Akbari</title>
     <link rel="stylesheet" href="portfolio.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-    
-
 </head>
 
 <body>
@@ -29,17 +27,18 @@
 
         <p>
             <strong>Project Name:</strong> Gradslist - an Online Marketplace Platform<br>
+            <strong>My Name:</strong> Ahmad Akbari<br>
             <strong>My Role:</strong> Project Manager & Full Stack Developer<br>
             <strong>Team Size:</strong> 6 Developers<br>
             <strong>Duration:</strong> Fall 2025 – 15 Weeks<br>
             <strong>Figma Design:</strong> <a href="https://www.figma.com/design/RHK3O1Wf6Wm4KXBukF0cRZ/TeamGrad_CompleteDesignSystem_Week9?node-id=513-1261&t=lcS0swP8yG6LQF3X-0" target="_blank">View Figma</a><br>
-            <strong>Live Site:</strong> <a href="#" target="_blank">View Deployment</a>
+            <strong>Live Site:</strong> <a href="https://gradslist.web.app/" target="_blank">View Deployment</a>
         </p>
         <div class="section-divider"></div>
         <h3>Project Description</h3>
         <p>
             Gradslist is a modern online marketplace platform similar to OfferUp and 
-            Facebook Marketplace. It allows users to post items, browse listings, 
+            Facebook Marketplace. It allows users to post items, browse listings, leave reviews on item and Seller profiles, 
             search across categories, and buy/sell products in a streamlined and 
             user-friendly environment. Our goal was to create a fast, clean, and 
             reliable marketplace powered by real-time Firebase data, dynamic filters, 
@@ -51,9 +50,11 @@
     <!-- CONTRIBUTIONS -->
     <section class="card">
         <h3>My Role & Contributions</h3>
-        <p>As the project manager and lead front-end developer, I directed the technical vision of the project and implemented core functionality used across the application:</p>
+        <p>As the project manager and lead full stack developer, I directed the technical vision of the project and implemented core functionality used across the application:</p>
 
         <ul>
+
+            <!-- EXISTING ITEMS (Unchanged) -->
             <li><strong>Project Management & Architecture</strong>
                 <ul>
                     <li>Led all sprints, task delegation, and weekly planning</li>
@@ -63,12 +64,16 @@
                 </ul>
             </li>
 
-            <li><strong>Front-End Development</strong>
+            <li><strong>Full Stack Development</strong>
                 <ul>
                     <li>Built global Header, Footer, layout system, and UI structure</li>
                     <li>Created the category-based subheader with clickable filters for every listing type</li>
                     <li>Rebuilt homepage to display fully dynamic Firestore listings instead of static items</li>
                     <li>Implemented subcategory options based on user selection in the listing creation form</li>
+                    <li>Added a dedicated “View Seller Profile” button directly on the Listing Detail page</li>
+                    <li>Added security logic ensuring buyers can only view a seller profile and cannot edit it</li>
+                    <li>Added instant profile image update functionality inside the View Profile page</li>
+                    <li>Added authentication logic to hide the Seller button on items owned by the logged-in user</li>
                 </ul>
             </li>
 
@@ -92,7 +97,10 @@
             <li><strong>Debugging & Stability</strong>
                 <ul>
                     <li>Resolved Vite “import-analysis” errors and broken routing imports</li>
+                    <li>Fix design issues, such as view Details button placement and styling</li>
                     <li>Cleaned component structure and removed unused code</li>
+                    <li>Resolved duplication issues throughout components</li>
+                    <li>Resolved multiple GitHub conflict issues and restored overwritten files</li>
                 </ul>
             </li>
         </ul>
@@ -103,13 +111,29 @@
         <br>
         <div class="section-divider"></div>
         <h4>Screenshots</h4>
-        <div class="images">
-            <img src="images/search.png" alt="Search Feature">
-            <img src="images/filter.png" alt="Filter Feature">
+        <div class="images lightbox-gallery">
+            <img src="images/Searchbar.png" alt="Search Feature">
+            <img src="images/profilepage.png" alt="User Profile Page">
+            <img src="images/profilephotoeditbutton.png" alt="Profile Photo Edit Button">
+
+            <img src="images/homepage.png" alt="Homepage – First Half">
+            <img src="images/homepage2.png" alt="Homepage – Second Half">
+
+            <img src="images/itemforsale.png" alt="Item For Sale – With Subcategory">
+            <img src="images/subcatdrop.png" alt="Subcategory Dropdown Example">
+            <img src="images/subcatdrop2.png" alt="Subcategory Filtering Example">
+
+            <img src="images/posteditem.png" alt="Logged-in User's Posted Item (No Contact Seller Button)">
+            <img src="images/contactseller.png" alt="Contact Seller Button Example">
+        </div>
+        <div id="lightbox" class="lightbox">
+            <div class="lightbox-content">
+                <span class="close-lightbox">&times;</span>
+                <img class="lightbox-image" src="" alt="">
+            </div>
         </div>
     </section>
 
-    <!-- JOURNEY -->
     <section class="card">
         <h3>My Learning Journey</h3>
         <p>
@@ -141,6 +165,7 @@
             <li>Advanced React development</li>
             <li>Agile / Sprint Planning</li>
             <li>Firebase Firestore</li>
+            <li>Full Stack Development</li>
             <li>Efficient Firestore data querying</li>
             <li>Frontend–Backend Integration</li>
             <li>Debugging & Error Handling</li>
@@ -158,7 +183,6 @@
 </body>
 </html>
 
-
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".card");
@@ -174,6 +198,39 @@ document.addEventListener("DOMContentLoaded", () => {
     cards.forEach(card => observer.observe(card));
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.querySelector(".lightbox-image");
+    const closeBtn = document.querySelector(".close-lightbox");
+
+    // OPEN LIGHTBOX
+    document.querySelectorAll(".lightbox-gallery img").forEach(img => {
+        img.addEventListener("click", () => {
+            lightboxImg.src = img.src;    // load the clicked image
+            lightbox.classList.add("active");  // show the popup
+        });
+    });
+
+    // CLOSE LIGHTBOX (close button)
+    closeBtn.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+        lightboxImg.src = "";   // optional: clear image
+    });
+
+    // CLOSE LIGHTBOX (clicking outside the popup box)
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove("active");
+            lightboxImg.src = "";
+        }
+    });
+});
+</script>
+
+
+
+
 
 
 
